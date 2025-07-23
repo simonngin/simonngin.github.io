@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Pacer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .content {
+            background: white;
+            margin: 2rem 0;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem 0;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .effective-date {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .back-link {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Pacer</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Pacer</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <a href="index.html" class="back-link">← Back to Pacer</a>
+            
+            <h1>Terms of Service</h1>
+            
+            <div class="effective-date">
+                Effective Date: January 23, 2025
+            </div>
+
+            <p>Welcome to Pacer. These Terms of Service ("Terms") govern your use of the Pacer mobile application ("App") operated by us ("we," "us," or "our"). By downloading, installing, or using our App, you agree to be bound by these Terms.</p>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using Pacer, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+
+            <h2>2. Description of Service</h2>
+            <p>Pacer is an iOS running companion app that provides:</p>
+            <ul>
+                <li>Virtual pacing assistance with audio feedback</li>
+                <li>Real-time pace tracking using GPS location services</li>
+                <li>Preset pace selection (3:30 to 8:00 min/km) for all users</li>
+                <li>Custom pace input for Pro subscription users</li>
+                <li>Distance and time tracking during runs</li>
+                <li>Integration with Apple Health for workout tracking</li>
+            </ul>
+
+            <h2>3. Subscription Services</h2>
+            <h3>3.1 Free Tier</h3>
+            <p>The free tier includes preset pace options and basic running tracking features.</p>
+
+            <h3>3.2 Pro Subscription</h3>
+            <p>Pro subscription features include:</p>
+            <ul>
+                <li>Custom pace settings</li>
+                <li>Personalized reminder intervals</li>
+            </ul>
+
+            <h3>3.3 Subscription Terms</h3>
+            <ul>
+                <li>We offer weekly and monthly auto-renewable subscriptions</li>
+                <li>Payment will be charged to your iTunes Account at confirmation of purchase</li>
+                <li>Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period</li>
+                <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                <li>You can manage and cancel your subscriptions by going to your Account Settings on the App Store after purchase</li>
+                <li>No cancellation of the current subscription is allowed during active subscription period</li>
+            </ul>
+
+            <h2>4. User Responsibilities</h2>
+            <p>You agree to:</p>
+            <ul>
+                <li>Use the App only for lawful purposes and in accordance with these Terms</li>
+                <li>Ensure you have appropriate permissions to access location services</li>
+                <li>Use the App responsibly during physical activities and prioritize your safety</li>
+                <li>Not attempt to reverse engineer, decompile, or disassemble the App</li>
+                <li>Not use the App in any way that could damage, disable, or impair the service</li>
+            </ul>
+
+            <h2>5. Location Services</h2>
+            <p>Pacer requires location access to provide pace tracking functionality. Location data is:</p>
+            <ul>
+                <li>Used only during active workout sessions</li>
+                <li>Not stored permanently on our servers</li>
+                <li>Used solely for real-time pace calculations</li>
+                <li>Subject to accuracy filtering (readings with >20m accuracy are ignored)</li>
+            </ul>
+
+            <h2>6. Health Data Integration</h2>
+            <p>Integration with Apple Health is optional and requires explicit user permission. When enabled:</p>
+            <ul>
+                <li>Workout data (type, duration, distance, start/end times) is saved to HealthKit</li>
+                <li>You retain full control over this data through iOS Health app settings</li>
+                <li>We do not access or store health data on our servers</li>
+            </ul>
+
+            <h2>7. Disclaimers and Limitations</h2>
+            <h3>7.1 Health and Safety</h3>
+            <p>Pacer is designed to assist with pace training but should not replace professional fitness advice. Users should:</p>
+            <ul>
+                <li>Consult healthcare professionals before beginning any exercise program</li>
+                <li>Exercise within their physical capabilities</li>
+                <li>Prioritize safety over pace targets</li>
+                <li>Be aware of their surroundings while using the app</li>
+            </ul>
+
+            <h3>7.2 GPS Accuracy</h3>
+            <p>GPS tracking accuracy may vary based on environmental conditions, device limitations, and other factors. We do not guarantee precise measurements and recommend using the App as a general training aid.</p>
+
+            <h2>8. Intellectual Property</h2>
+            <p>The App and its original content, features, and functionality are owned by us and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+
+            <h2>9. Privacy</h2>
+            <p>Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the App, to understand our practices.</p>
+
+            <h2>10. Termination</h2>
+            <p>We may terminate or suspend your access to the App immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+
+            <h2>11. Changes to Terms</h2>
+            <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p>
+
+            <h2>12. Governing Law</h2>
+            <p>These Terms shall be interpreted and governed by the laws of the jurisdiction in which our company is established, without regard to its conflict of law provisions.</p>
+
+            <h2>13. Contact Information</h2>
+            <p>If you have any questions about these Terms of Service, please contact us through the App Store or our support channels.</p>
+
+            <p><em>Last updated: January 23, 2025</em></p>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2025 Pacer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
