@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacer - Your Running Companion</title>
+    <title>Pacer - Your Virtual Running Coach</title>
     <style>
         * {
             margin: 0;
@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
 
@@ -26,346 +26,226 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid #444;
         }
 
-        nav {
+        .header-content {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        main {
-            margin-top: 80px;
-        }
-
-        .hero {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            margin: 2rem 0;
-            border-radius: 20px;
-            padding: 4rem 2rem;
-            text-align: center;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #f0f8ff);
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00ff88, #0099ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero p {
+        .tagline {
             font-size: 1.2rem;
+            color: #ccc;
             margin-bottom: 2rem;
-            opacity: 0.9;
         }
 
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 25px;
-            margin: 0 auto 2rem auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .section {
-            background: white;
-            margin: 2rem 0;
-            padding: 3rem 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #333;
+        .hero {
+            padding: 4rem 0;
             text-align: center;
-            position: relative;
         }
 
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 2px;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
         }
 
-        .features-grid {
+        .hero p {
+            font-size: 1.3rem;
+            color: #bbb;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            padding: 4rem 0;
         }
 
-        .feature-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
             padding: 2rem;
             border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
+        .feature h3 {
+            color: #00ff88;
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
-        .feature-card h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .feature-card p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .app-store-button {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 1rem;
-        }
-
-        .app-store-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        .feature p {
+            color: #ccc;
         }
 
         .legal-links {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid #444;
+        }
+
+        .legal-links h2 {
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-top: 3rem;
             flex-wrap: wrap;
         }
 
-        .legal-link {
-            background: white;
-            color: #667eea;
-            padding: 12px 24px;
-            border: 2px solid #667eea;
-            border-radius: 50px;
+        .link-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             text-decoration: none;
-            font-weight: 600;
+            color: white;
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
-        .legal-link:hover {
-            background: #667eea;
-            color: white;
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
 
+        .link-card h3 {
+            color: #00ff88;
+            margin-bottom: 0.5rem;
+        }
+
         footer {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: white;
             text-align: center;
             padding: 2rem 0;
-            margin-top: 2rem;
+            border-top: 1px solid #444;
+            margin-top: 4rem;
+            color: #888;
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
             .hero h1 {
                 font-size: 2rem;
             }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .legal-links {
+            
+            .links {
                 flex-direction: column;
                 align-items: center;
+            }
+            
+            .link-card {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Pacer</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="app-icon.png" alt="Pacer App Icon" class="app-icon">
+                <div class="logo">Pacer</div>
+            </div>
+            <div class="tagline">Your Personal Pace Coach</div>
+        </header>
 
-    <main class="container">
         <section class="hero">
-            <div class="app-icon">🏃‍♂️</div>
-            <h1>Pacer</h1>
-            <p>Your intelligent running companion for perfect pace training</p>
+            <h1>Focus on Your Run, Not Your Phone</h1>
+            <p>Whether you're training for a 5K, pushing for a personal best, or just want to stay on pace during your runs, Pacer is here to help. With real-time feedback, customizable pace targets, and smart voice reminders, you'll always know if you're ahead, behind, or right on track.</p>
         </section>
 
-        <section class="section">
-            <h2>Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Smart Pace Tracking</h3>
-                    <p>Real-time GPS tracking with audio feedback to keep you on target pace during your runs.</p>
+        <section class="features">
+            <div class="feature">
+                <h3>⚡ Real-Time Pace Tracking</h3>
+                <p>Get instant updates on your pace as you run. No guesswork, just clear feedback on whether you're ahead, behind, or right on track.</p>
+            </div>
+            <div class="feature">
+                <h3>🎧 Smart Audio Coaching</h3>
+                <p>Voice prompts keep you informed without checking your phone. Focus on your run while staying perfectly paced.</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Clean, Simple Interface</h3>
+                <p>No clutter, just the essentials for better running. Lightweight, beautiful, and effective — exactly what you need and nothing more.</p>
+            </div>
+            <div class="feature">
+                <h3>📱 Apple Health Integration</h3>
+                <p>Save your runs to Apple Health and view all your workouts in one place.</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 Privacy First</h3>
+                <p>Your data stays on your device. No external tracking, analytics, or data sharing.</p>
+            </div>
+        </section>
+        
+        <section class="pro-features">
+            <div class="container">
+                <h2 style="text-align: center; color: #00ff88; margin-bottom: 2rem;">Upgrade to Pacer Pro for More Control</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>🎯 Custom Pace Targets</h3>
+                        <p>Set any pace you want, not just presets. Train for your specific goals with precision pace control.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>⏱️ Custom Reminder Intervals</h3>
+                        <p>Get pace updates exactly when you need them — every 50m, 100m, or any distance before each kilometer. Your training, your way.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔊</div>
-                    <h3>Audio Coaching</h3>
-                    <p>Get instant voice feedback on whether you're ahead, behind, or perfectly on pace.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Custom Paces</h3>
-                    <p>Set your own target paces with Pro subscription, or choose from preset options (3:30-8:00 min/km).</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Health Integration</h3>
-                    <p>Seamlessly sync your workouts with Apple Health to track your running progress.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Privacy First</h3>
-                    <p>Your data stays on your device. No external tracking, analytics, or data sharing.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💎</div>
-                    <h3>Pro Features</h3>
-                    <p>Upgrade for custom pace settings and personalized reminder intervals.</p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="color: #ccc; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                        Pacer is built to be a no-frills, simple tool for pacing your runs. Pro features give you the flexibility to customize your training exactly how you want it.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Download Pacer</h2>
-            <div class="cta-section">
-                <p>Start your perfect pace training today</p>
-                <a href="#" class="app-store-button">📱 Download on App Store</a>
-                
-                <div class="legal-links">
-                    <a href="terms.html" class="legal-link">Terms of Service</a>
-                    <a href="privacy.html" class="legal-link">Privacy Policy</a>
-                </div>
+        <section class="legal-links">
+            <h2>Legal Information</h2>
+            <div class="links">
+                <a href="privacy-policy.html" class="link-card">
+                    <h3>Privacy Policy</h3>
+                    <p>Learn how we protect and handle your data</p>
+                </a>
+                <a href="terms-of-service.html" class="link-card">
+                    <h3>Terms of Service</h3>
+                    <p>Our terms and conditions for using PacerApp</p>
+                </a>
             </div>
         </section>
-    </main>
 
-    <footer class="container">
-        <p>&copy; 2025 Pacer. Your running companion for perfect pace training.</p>
-    </footer>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
-        // Add animation on scroll for sections
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-    </script>
+        <footer>
+            <p>&copy; 2025 Pacer. All rights reserved.</p>
+            <p>Contact us: <a href="https://simonngin.github.io/" style="color: #00ff88;">simonngin.github.io</a></p>
+        </footer>
+    </div>
 </body>
 </html>
