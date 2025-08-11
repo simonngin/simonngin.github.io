@@ -12,114 +12,200 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            line-height: 1.6;
-            min-height: 100vh;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.7;
+            font-size: 18px;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         header {
-            padding: 2rem 0;
+            padding: 60px 0 40px;
             text-align: center;
-            border-bottom: 1px solid #444;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(45deg, #00ff88, #0099ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            border-bottom: 1px solid #e8e8e8;
+            margin-bottom: 60px;
         }
 
         .back-link {
             display: inline-block;
-            color: #00ff88;
+            color: #666;
             text-decoration: none;
-            margin-bottom: 1rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid #00ff88;
-            border-radius: 5px;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .back-link:hover {
-            background: #00ff88;
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
             color: #1a1a1a;
         }
 
         .content {
-            padding: 2rem 0;
+            padding-bottom: 80px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
             text-align: center;
-            color: #00ff88;
+            color: #1a1a1a;
+            letter-spacing: -2px;
+            line-height: 1.1;
         }
 
         h2 {
-            color: #00ff88;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
 
         h3 {
-            color: #0099ff;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
         }
 
         p, li {
-            margin-bottom: 1rem;
-            color: #ccc;
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.6;
         }
 
         ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
         }
 
         .highlight {
-            background: rgba(0, 255, 136, 0.1);
-            padding: 1rem;
-            border-left: 3px solid #00ff88;
-            margin: 1rem 0;
-            border-radius: 5px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-left: 4px solid #1a1a1a;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            color: #333;
         }
 
         .warning {
-            background: rgba(255, 153, 0, 0.1);
-            padding: 1rem;
-            border-left: 3px solid #ff9900;
-            margin: 1rem 0;
-            border-radius: 5px;
+            background: #fff8e1;
+            padding: 30px;
+            border-left: 4px solid #ff9800;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .warning p {
+            margin-bottom: 0;
+            color: #e65100;
         }
 
         .last-updated {
             text-align: center;
-            color: #888;
+            color: #999;
             font-style: italic;
-            margin-bottom: 2rem;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
         }
 
         footer {
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid #444;
-            margin-top: 4rem;
-            color: #888;
+            padding: 60px 0;
+            border-top: 1px solid #e8e8e8;
+            color: #999;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 40px 0 30px;
+                margin-bottom: 40px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin-top: 50px;
+                margin-bottom: 25px;
+            }
+
+            .highlight,
+            .warning {
+                padding: 20px;
+                margin: 30px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .highlight,
+            .warning {
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
@@ -132,17 +218,17 @@
 
         <div class="content">
             <h1>Terms of Service</h1>
-            <div class="last-updated">Last updated: January 30, 2025</div>
+            <div class="last-updated">Last updated: January 11, 2025</div>
 
             <div class="highlight">
-                <p><strong>Welcome to Pacer — Your Personal Pace Coach!</strong> These Terms of Service govern your use of our lightweight, no-frills pace tracking application. By using Pacer, you agree to these terms.</p>
+                <p><strong>Welcome to Pacer!</strong> These Terms of Service govern your use of our pace tracking application. By using Pacer, you agree to these terms.</p>
             </div>
 
-            <h2>1. Acceptance of Terms</h2>
+            <h2>Acceptance of Terms</h2>
             <p>By downloading, installing, or using Pacer, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use the app.</p>
 
-            <h2>2. Description of Service</h2>
-            <p>Pacer is your personal pace coach — a lightweight, simple tool designed to help you maintain perfect pace during your runs. Whether you're training for a 5K, pushing for a personal best, or just want to stay on track, Pacer provides:</p>
+            <h2>Description of Service</h2>
+            <p>Pacer is your personal pace coach designed to help you maintain perfect pace during your runs. The app provides:</p>
             <ul>
                 <li><strong>Real-Time Pace Tracking:</strong> Instant updates on your pace as you run</li>
                 <li><strong>Smart Audio Coaching:</strong> Voice prompts keep you informed without checking your phone</li>
@@ -151,9 +237,7 @@
                 <li><strong>Pro Features:</strong> Custom pace targets and reminder intervals (subscription required)</li>
             </ul>
 
-            <p>Pacer is built to be lightweight, beautiful, and effective — so you can focus on your run, not your phone.</p>
-
-            <h2>3. User Responsibilities</h2>
+            <h2>User Responsibilities</h2>
 
             <h3>Safe Usage</h3>
             <div class="warning">
@@ -174,13 +258,13 @@
                 <li>Respect intellectual property rights and do not redistribute the app</li>
             </ul>
 
-            <h2>4. Subscription and Pro Features</h2>
+            <h2>Subscription and Pro Features</h2>
 
             <h3>Pacer Pro Subscription</h3>
             <p>Upgrade to Pacer Pro for more control over your training:</p>
             <ul>
                 <li><strong>Custom Pace Targets:</strong> Set any pace you want, not just presets</li>
-                <li><strong>Custom Reminder Intervals:</strong> Get pace updates exactly when you need them (e.g., every 50m, 100m, or any distance before each kilometer)</li>
+                <li><strong>Custom Reminder Intervals:</strong> Get pace updates exactly when you need them</li>
                 <li><strong>Subscription Management:</strong> Managed through your Apple ID and App Store account</li>
             </ul>
 
@@ -192,7 +276,7 @@
                 <li>No refunds for partial subscription periods</li>
             </ul>
 
-            <h2>5. Privacy and Data</h2>
+            <h2>Privacy and Data</h2>
 
             <h3>Location Data</h3>
             <p>Pacer requires location access to function properly:</p>
@@ -210,7 +294,7 @@
                 <li>We comply with applicable health data protection regulations</li>
             </ul>
 
-            <h2>6. Disclaimers and Limitations</h2>
+            <h2>Disclaimers and Limitations</h2>
 
             <div class="warning">
                 <p><strong>Health and Safety Disclaimer:</strong> Pacer is not a medical device and should not be used for medical diagnosis or treatment.</p>
@@ -231,7 +315,7 @@
                 <li>Our liability is limited to the amount paid for the app subscription, if any</li>
             </ul>
 
-            <h2>7. Intellectual Property</h2>
+            <h2>Intellectual Property</h2>
             <p>Pacer and all its contents, features, and functionality are owned by us and are protected by intellectual property laws. You may not:</p>
             <ul>
                 <li>Copy, modify, or distribute the app or its content</li>
@@ -240,7 +324,7 @@
                 <li>Create derivative works based on the app</li>
             </ul>
 
-            <h2>8. Third-Party Services</h2>
+            <h2>Third-Party Services</h2>
 
             <h3>Apple Services</h3>
             <p>Pacer integrates with Apple services including:</p>
@@ -250,8 +334,7 @@
                 <li><strong>Core Location:</strong> GPS services provided by Apple's frameworks</li>
             </ul>
 
-
-            <h2>9. Termination</h2>
+            <h2>Termination</h2>
             <p>You may stop using Pacer at any time by:</p>
             <ul>
                 <li>Uninstalling the app from your device</li>
@@ -261,7 +344,7 @@
 
             <p>We may terminate or suspend access to our service for violations of these terms or other reasonable causes.</p>
 
-            <h2>10. Updates and Changes</h2>
+            <h2>Updates and Changes</h2>
             <ul>
                 <li>We may update the app to add features, fix bugs, or improve performance</li>
                 <li>These Terms of Service may be updated from time to time</li>
@@ -269,18 +352,18 @@
                 <li>We will notify users of significant changes when possible</li>
             </ul>
 
-            <h2>11. Governing Law</h2>
+            <h2>Governing Law</h2>
             <p>These terms are governed by the laws of the jurisdiction where the app developer is located, without regard to conflict of law principles.</p>
 
-            <h2>12. Contact Information</h2>
+            <h2>Contact Information</h2>
             <p>If you have questions about these Terms of Service, please contact us:</p>
             <ul>
-                <li>Website: <a href="https://simonngin.github.io/" style="color: #00ff88;">simonngin.github.io</a></li>
-                <li>Through the "Contact us" feature in the Pacer settings</li>
+                <li>Website: <a href="https://simonngin.github.io/">simonngin.github.io</a></li>
+                <li>Through the app's contact feature</li>
             </ul>
 
             <div class="highlight">
-                <p><strong>Remember:</strong> Your safety comes first. Pacer is a simple, no-frills tool designed to help you pace your runs effectively, but you are responsible for exercising safely and within your limits.</p>
+                <p><strong>Remember:</strong> Your safety comes first. Pacer is designed to help you pace your runs effectively, but you are responsible for exercising safely and within your limits.</p>
             </div>
         </div>
 

@@ -12,159 +12,323 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            line-height: 1.6;
-            min-height: 100vh;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.7;
+            font-size: 18px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         header {
-            padding: 2rem 0;
+            padding: 80px 0 40px;
             text-align: center;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #e8e8e8;
+            margin-bottom: 60px;
         }
 
         .header-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
         .app-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #00ff88, #0099ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: #1a1a1a;
         }
 
         .tagline {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 2rem;
+            font-size: 24px;
+            color: #666;
+            font-weight: 400;
+            margin-top: 10px;
         }
 
         .hero {
-            padding: 4rem 0;
-            text-align: center;
+            margin-bottom: 80px;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            color: #1a1a1a;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            color: #bbb;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .hero .subtitle {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+            line-height: 1.4;
         }
 
-        .features {
+        .app-preview {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .screenshot {
+            width: 280px;
+            height: auto;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-store-link {
+            display: inline-block;
+            background: #000;
+            color: white;
+            text-decoration: none;
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            letter-spacing: -0.5px;
+        }
+
+        .app-store-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .features-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 0;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px 80px;
+            margin-bottom: 60px;
         }
 
         .feature {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            text-align: left;
         }
 
         .feature h3 {
-            color: #00ff88;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
         }
 
         .feature p {
-            color: #ccc;
+            color: #666;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .pro-section {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 60px;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .pro-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+
+        .pro-description {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .pro-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .pro-feature {
+            text-align: left;
+        }
+
+        .pro-feature h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .pro-feature p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .legal-section {
+            padding: 60px 0;
+            border-top: 1px solid #e8e8e8;
+            text-align: center;
         }
 
         .legal-links {
-            text-align: center;
-            padding: 3rem 0;
-            border-top: 1px solid #444;
-        }
-
-        .legal-links h2 {
-            margin-bottom: 2rem;
-            color: #fff;
-        }
-
-        .links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 40px;
         }
 
-        .link-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem 2rem;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .legal-link {
+            color: #666;
             text-decoration: none;
-            color: white;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        .link-card:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .link-card h3 {
-            color: #00ff88;
-            margin-bottom: 0.5rem;
+        .legal-link:hover {
+            color: #1a1a1a;
         }
 
         footer {
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid #444;
-            margin-top: 4rem;
-            color: #888;
+            padding: 40px 0;
+            color: #999;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #1a1a1a;
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+            .container {
+                padding: 0 20px;
             }
-            
-            .links {
+
+            header {
+                padding: 60px 0 30px;
+                margin-bottom: 40px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+
+            .tagline {
+                font-size: 20px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+
+            .hero .subtitle {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+
+            .screenshots {
                 flex-direction: column;
                 align-items: center;
+                gap: 30px;
             }
-            
-            .link-card {
-                width: 100%;
-                max-width: 300px;
+
+            .screenshot {
+                width: 240px;
+            }
+
+            .features-grid,
+            .pro-features {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .pro-section {
+                padding: 40px 30px;
+            }
+
+            .legal-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .app-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .screenshot {
+                width: 220px;
             }
         }
     </style>
@@ -181,70 +345,82 @@
 
         <section class="hero">
             <h1>Focus on Your Run, Not Your Phone</h1>
-            <p>Whether you're training for a 5K, pushing for a personal best, or just want to stay on pace during your runs, Pacer is here to help. With real-time feedback, customizable pace targets, and smart voice reminders, you'll always know if you're ahead, behind, or right on track.</p>
+            <p class="subtitle">Real-time pace coaching that keeps you on track without the distraction</p>
         </section>
 
-        <section class="features">
-            <div class="feature">
-                <h3>⚡ Real-Time Pace Tracking</h3>
-                <p>Get instant updates on your pace as you run. No guesswork, just clear feedback on whether you're ahead, behind, or right on track.</p>
+        <section class="app-preview">
+            <div class="screenshots">
+                <img src="PacerSC2.jpg" alt="Pacer App Screenshot 1" class="screenshot">
+                <img src="PacerSC3.jpg" alt="Pacer App Screenshot 2" class="screenshot">
             </div>
-            <div class="feature">
-                <h3>🎧 Smart Audio Coaching</h3>
-                <p>Voice prompts keep you informed without checking your phone. Focus on your run while staying perfectly paced.</p>
+            <a href="https://apps.apple.com/us/app/pacer-live-running-feedback/id6748974835" class="app-store-link">
+                Download on the App Store
+            </a>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">What Makes Pacer Different</h2>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Real-Time Pace Tracking</h3>
+                    <p>Get instant updates on your pace as you run. No guesswork, just clear feedback on whether you're ahead, behind, or right on track.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="feature-icon">🎧</span>
+                    <h3>Smart Audio Coaching</h3>
+                    <p>Voice prompts keep you informed without checking your phone. Focus on your run while staying perfectly paced.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Clean, Simple Interface</h3>
+                    <p>No clutter, just the essentials for better running. Lightweight, beautiful, and effective — exactly what you need and nothing more.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="feature-icon">📱</span>
+                    <h3>Apple Health Integration</h3>
+                    <p>Save your runs to Apple Health and view all your workouts in one place.</p>
+                </div>
             </div>
-            <div class="feature">
-                <h3>🎯 Clean, Simple Interface</h3>
-                <p>No clutter, just the essentials for better running. Lightweight, beautiful, and effective — exactly what you need and nothing more.</p>
-            </div>
-            <div class="feature">
-                <h3>📱 Apple Health Integration</h3>
-                <p>Save your runs to Apple Health and view all your workouts in one place.</p>
-            </div>
-            <div class="feature">
-                <h3>🔒 Privacy First</h3>
-                <p>Your data stays on your device. No external tracking, analytics, or data sharing.</p>
+            
+            <div class="feature" style="text-align: center; margin-top: 40px;">
+                <span class="feature-icon">🔒</span>
+                <h3>Privacy First</h3>
+                <p style="max-width: 500px; margin: 0 auto;">Your data stays on your device. No external tracking, analytics, or data sharing. Just you and your running goals.</p>
             </div>
         </section>
-        
-        <section class="pro-features">
-            <div class="container">
-                <h2 style="text-align: center; color: #00ff88; margin-bottom: 2rem;">Upgrade to Pacer Pro for More Control</h2>
-                <div class="features">
-                    <div class="feature">
-                        <h3>🎯 Custom Pace Targets</h3>
-                        <p>Set any pace you want, not just presets. Train for your specific goals with precision pace control.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>⏱️ Custom Reminder Intervals</h3>
-                        <p>Get pace updates exactly when you need them — every 50m, 100m, or any distance before each kilometer. Your training, your way.</p>
-                    </div>
+
+        <section class="pro-section">
+            <h2>Pacer Pro</h2>
+            <p class="pro-description">Unlock advanced customization for serious runners</p>
+            
+            <div class="pro-features">
+                <div class="pro-feature">
+                    <h4>🎯 Custom Pace Targets</h4>
+                    <p>Set any pace you want, not just presets. Train for your specific goals with precision pace control.</p>
                 </div>
-                <div style="text-align: center; margin-top: 2rem;">
-                    <p style="color: #ccc; font-size: 1.1rem; max-width: 600px; margin: 0 auto; padding-bottom: 2rem;">
-                        Pacer is built to be a no-frills, simple tool for pacing your runs. Pro features give you the flexibility to customize your training exactly how you want it.
-                    </p>
+                
+                <div class="pro-feature">
+                    <h4>⏱️ Custom Reminder Intervals</h4>
+                    <p>Get pace updates exactly when you need them — every 50m, 100m, or any distance before each kilometer.</p>
                 </div>
             </div>
         </section>
 
-        <section class="legal-links">
-            <h2>Legal Information</h2>
-            <div class="links">
-                <a href="privacy-policy.html" class="link-card">
-                    <h3>Privacy Policy</h3>
-                    <p>Learn how we protect and handle your data</p>
-                </a>
-                <a href="terms-of-service.html" class="link-card">
-                    <h3>Terms of Service</h3>
-                    <p>Our terms and conditions for using PacerApp</p>
-                </a>
+        <section class="legal-section">
+            <div class="legal-links">
+                <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+                <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
             </div>
         </section>
 
         <footer>
             <p>&copy; 2025 Pacer. All rights reserved.</p>
-            <p>Contact us: <a href="https://simonngin.github.io/" style="color: #00ff88;">simonngin.github.io</a></p>
+            <p>Contact: <a href="https://simonngin.github.io/">simonngin.github.io</a></p>
         </footer>
     </div>
 </body>

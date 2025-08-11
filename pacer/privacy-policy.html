@@ -12,106 +12,185 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            line-height: 1.6;
-            min-height: 100vh;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.7;
+            font-size: 18px;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         header {
-            padding: 2rem 0;
+            padding: 60px 0 40px;
             text-align: center;
-            border-bottom: 1px solid #444;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(45deg, #00ff88, #0099ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            border-bottom: 1px solid #e8e8e8;
+            margin-bottom: 60px;
         }
 
         .back-link {
             display: inline-block;
-            color: #00ff88;
+            color: #666;
             text-decoration: none;
-            margin-bottom: 1rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid #00ff88;
-            border-radius: 5px;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .back-link:hover {
-            background: #00ff88;
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
             color: #1a1a1a;
         }
 
         .content {
-            padding: 2rem 0;
+            padding-bottom: 80px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
             text-align: center;
-            color: #00ff88;
+            color: #1a1a1a;
+            letter-spacing: -2px;
+            line-height: 1.1;
         }
 
         h2 {
-            color: #00ff88;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
 
         h3 {
-            color: #0099ff;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
         }
 
         p, li {
-            margin-bottom: 1rem;
-            color: #ccc;
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.6;
         }
 
         ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
         }
 
         .highlight {
-            background: rgba(0, 255, 136, 0.1);
-            padding: 1rem;
-            border-left: 3px solid #00ff88;
-            margin: 1rem 0;
-            border-radius: 5px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-left: 4px solid #1a1a1a;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            color: #333;
         }
 
         .last-updated {
             text-align: center;
-            color: #888;
+            color: #999;
             font-style: italic;
-            margin-bottom: 2rem;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
         }
 
         footer {
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid #444;
-            margin-top: 4rem;
-            color: #888;
+            padding: 60px 0;
+            border-top: 1px solid #e8e8e8;
+            color: #999;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 40px 0 30px;
+                margin-bottom: 40px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin-top: 50px;
+                margin-bottom: 25px;
+            }
+
+            .highlight {
+                padding: 20px;
+                margin: 30px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .highlight {
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
@@ -124,22 +203,22 @@
 
         <div class="content">
             <h1>Privacy Policy</h1>
-            <div class="last-updated">Last updated: January 30, 2025</div>
+            <div class="last-updated">Last updated: January 11, 2025</div>
 
             <div class="highlight">
-                <p><strong>Your privacy is important to us.</strong> This Privacy Policy explains how Pacer — your personal pace coach — handles your data. Pacer is designed to be simple and private: we only store your name for personalization, and everything else stays local on your device.</p>
+                <p><strong>Your privacy is important to us.</strong> This Privacy Policy explains how Pacer handles your data. Pacer is designed to be simple and private: we only store your name for personalization, and everything else stays local on your device.</p>
             </div>
 
-            <h2>1. Information We Store</h2>
+            <h2>Information We Collect</h2>
 
             <h3>Personal Information</h3>
             <p>Pacer only stores minimal information for personalization:</p>
             <ul>
-                <li><strong>Your Name:</strong> Used to personalize the app interface (e.g., "Hey [Name], let's smash our goals!")</li>
+                <li><strong>Your Name:</strong> Used to personalize the app interface</li>
                 <li><strong>App Preferences:</strong> Settings like subscription status and notification preferences</li>
             </ul>
 
-            <h2>2. Data Processed Locally</h2>
+            <h2>Data Processed Locally</h2>
 
             <h3>Location Data</h3>
             <p>Pacer uses your device's location services for pace tracking, but this data stays on your device:</p>
@@ -157,9 +236,9 @@
                 <li><strong>Local Storage:</strong> All health data remains in Apple's secure ecosystem</li>
             </ul>
 
-            <h2>3. How We Use Your Information</h2>
+            <h2>How We Use Your Information</h2>
 
-            <h3>The Only Data We Store</h3>
+            <h3>Data We Store</h3>
             <ul>
                 <li><strong>Your Name:</strong> Used for personalization in the app interface</li>
                 <li><strong>App Settings:</strong> Preferences like Pro subscription status and notification settings</li>
@@ -173,7 +252,7 @@
                 <li>No personal data is transmitted to external servers</li>
             </ul>
 
-            <h2>4. Data Storage and Security</h2>
+            <h2>Data Storage and Security</h2>
 
             <div class="highlight">
                 <p><strong>Privacy by Design:</strong> Pacer is built to be private from the ground up. We don't have servers collecting your data because we don't need them.</p>
@@ -181,45 +260,44 @@
 
             <h3>Where Your Data Lives</h3>
             <ul>
-                <li><strong>On Your Device:</strong> Your name and app preferences are stored locally using iOS UserDefaults</li>
+                <li><strong>On Your Device:</strong> Your name and app preferences are stored locally using iOS secure storage</li>
                 <li><strong>Apple HealthKit:</strong> Workout and route data is saved directly to Apple's secure health platform</li>
                 <li><strong>No Cloud Storage:</strong> We don't have databases or servers storing your personal information</li>
-                <li><strong>No Data Mining:</strong> Since we don't collect your data, we can't (and don't want to) analyze or sell it</li>
+                <li><strong>No Data Mining:</strong> Since we don't collect your data, we can't analyze or sell it</li>
             </ul>
 
-            <h2>4. Third-Party Integration</h2>
+            <h2>Third-Party Integration</h2>
 
             <h3>Apple HealthKit</h3>
             <p>When you grant permission, Pacer integrates with Apple HealthKit to save your workout data. This data is governed by Apple's privacy policies and remains under your control.</p>
 
-
-            <h2>5. Your Privacy Rights</h2>
+            <h2>Your Privacy Rights</h2>
 
             <h3>Permission Control</h3>
             <ul>
-                <li><strong>Location Services:</strong> You can revoke location access in iOS Settings, though this will limit app functionality</li>
+                <li><strong>Location Services:</strong> You can revoke location access in iOS Settings</li>
                 <li><strong>HealthKit Access:</strong> Health permissions can be managed through iOS Health app settings</li>
-                <li><strong>Data Deletion:</strong> You can delete workout data through the Health app or by uninstalling PacerApp</li>
+                <li><strong>Data Deletion:</strong> You can delete workout data through the Health app or by uninstalling Pacer</li>
             </ul>
 
             <h3>Data Portability</h3>
             <p>Your workout data stored in Apple Health can be exported using Apple's data export features, ensuring you maintain control over your fitness information.</p>
 
-            <h2>6. Children's Privacy</h2>
+            <h2>Children's Privacy</h2>
             <p>Pacer is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us to have it removed.</p>
 
-            <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically.</p>
 
-            <h2>8. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us:</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
             <ul>
-                <li>Website: <a href="https://simonngin.github.io/" style="color: #00ff88;">simonngin.github.io</a></li>
-                <li>Through the "Contact us" feature in the Pacer settings</li>
+                <li>Website: <a href="https://simonngin.github.io/">simonngin.github.io</a></li>
+                <li>Through the app's contact feature</li>
             </ul>
 
             <div class="highlight">
-                <p><strong>Summary:</strong> Pacer's privacy approach is simple: we only store your name for personalization. Everything else (GPS data, workouts, routes) stays local on your device or in Apple's secure systems. No servers, no data collection, no complicated privacy concerns.</p>
+                <p><strong>Summary:</strong> Pacer's privacy approach is simple: we only store your name for personalization. Everything else stays local on your device or in Apple's secure systems. No servers, no data collection, no complicated privacy concerns.</p>
             </div>
         </div>
 
